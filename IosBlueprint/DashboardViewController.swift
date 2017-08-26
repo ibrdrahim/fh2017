@@ -22,14 +22,21 @@ class Ewallet {
 
 class DashboardViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
     @IBOutlet var ewalletCollection: UICollectionView!
+    @IBOutlet var promoCollection: UICollectionView!
 
 //    @IBOutlet weak var content: UITextView!
 //    @IBOutlet weak var token: UILabel!
+    
+    var promoImage = ["promo1","promo2","promo3"]
     
     var ewaletOption = [
         Ewallet(id: 0, name: "paytm", imageString: "paytm"),
         Ewallet(id: 1, name: "mobikwik", imageString: "mobikwik")
     ]
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
     
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = true
@@ -54,20 +61,42 @@ class DashboardViewController: UIViewController,UICollectionViewDataSource,UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ewaletOption.count
+        
+        if collectionView == ewalletCollection {
+            return ewaletOption.count
+        }else{
+            
+            return promoImage.count
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ewalletcell", for: indexPath) as! EwalletCollectionViewCell
         
-        cell.logo.image = UIImage(named: ewaletOption[indexPath.item].imageString)
+        if collectionView == ewalletCollection {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ewalletcell", for: indexPath) as! EwalletCollectionViewCell
+            
+            cell.logo.image = UIImage(named: ewaletOption[indexPath.item].imageString)
+            
+            return cell
+        }else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "promocell", for: indexPath)
+            cell.backgroundView = UIImageView(image: UIImage(named: promoImage[indexPath.item]))
+            
+            return cell
+        }
         
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width : (collectionView.frame.width / 2) - 10, height : collectionView.frame.height)
+        if collectionView == ewalletCollection {
+            
+            return CGSize(width : (collectionView.frame.width * 1/2) - 10, height : collectionView.frame.height)
+        }
+        
+        return CGSize(width : (collectionView.frame.width * 2/3) - 10, height : collectionView.frame.height)
+        
     }
     
 //    @IBAction func logoutBtn_tap(_ sender: AnyObject) {

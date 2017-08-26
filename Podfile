@@ -19,6 +19,8 @@ target 'IosBlueprint' do
   # Swift Keychain Wrapper
     pod 'KeychainAccess'
 
+    pod "TextFieldEffects"
+
 
   target 'IosBlueprintTests' do
     inherit! :search_paths
