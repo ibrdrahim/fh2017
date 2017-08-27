@@ -32,25 +32,33 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paytm" translatesAutoresizingMaskIntoConstraints="NO" id="EM4-R2-k0R">
                         <rect key="frame" x="60" y="10" width="143" height="48"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4M-d4-kf7">
+                        <rect key="frame" x="0.0" y="0.0" width="223" height="68"/>
+                    </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="b4M-d4-kf7" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="4KX-hs-Cgr"/>
                 <constraint firstItem="EM4-R2-k0R" firstAttribute="centerY" secondItem="zyU-d8-HvG" secondAttribute="centerY" id="7vr-W5-vo0"/>
                 <constraint firstItem="vdm-td-Oua" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="9jl-od-Cal"/>
                 <constraint firstItem="vdm-td-Oua" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="Ajc-Ia-gVY"/>
+                <constraint firstItem="b4M-d4-kf7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="BZC-Fv-9Aj"/>
                 <constraint firstItem="vdm-td-Oua" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="VNk-f4-Xqy"/>
                 <constraint firstItem="vdm-td-Oua" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Zyt-xD-kCX"/>
                 <constraint firstItem="zyU-d8-HvG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="cdA-Ft-Urr"/>
                 <constraint firstAttribute="bottom" secondItem="EM4-R2-k0R" secondAttribute="bottom" constant="10" id="gMh-eH-bnk"/>
+                <constraint firstItem="b4M-d4-kf7" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="iPn-QJ-yf2"/>
                 <constraint firstItem="EM4-R2-k0R" firstAttribute="leading" secondItem="zyU-d8-HvG" secondAttribute="trailing" constant="10" id="oV7-t9-qKf"/>
                 <constraint firstItem="zyU-d8-HvG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="vcx-9C-yER"/>
                 <constraint firstItem="EM4-R2-k0R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="wOi-Xo-a4L"/>
                 <constraint firstAttribute="trailing" secondItem="EM4-R2-k0R" secondAttribute="trailing" constant="20" id="xqt-n5-5SF"/>
+                <constraint firstItem="b4M-d4-kf7" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zk0-tk-lea"/>
             </constraints>
             <size key="customSize" width="223" height="68"/>
             <connections>
                 <outlet property="logo" destination="EM4-R2-k0R" id="paB-w2-8nD"/>
                 <outlet property="radioBtn" destination="zyU-d8-HvG" id="z3u-Zs-VKG"/>
+                <outlet property="selectBtn" destination="b4M-d4-kf7" id="mqT-K4-PyJ"/>
             </connections>
             <point key="canvasLocation" x="111.5" y="61"/>
         </collectionViewCell>

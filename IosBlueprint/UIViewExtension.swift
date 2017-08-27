@@ -76,3 +76,45 @@ class CircularUIImageView: UIImageView {
         self.layer.borderColor = UIColor.clear.cgColor
     }
 }
+
+extension String {
+    func getCurrencyValue() -> String{
+        
+        let str = Double(self)
+        let numberFormater = NumberFormatter()
+        numberFormater.numberStyle = .decimal
+        numberFormater.locale = Locale(identifier: "id_ID")
+        
+        let number = NSNumber(value: str!)
+        
+        return numberFormater.string(from: number)!
+    }
+}
+
+
+// Currency format for text field
+
+extension NumberFormatter {
+    convenience init(numberStyle: NumberFormatter.Style) {
+        self.init()
+        self.numberStyle = numberStyle
+    }
+}
+struct Formatter {
+    static let decimal = NumberFormatter(numberStyle: .decimal)
+}
+extension UITextField {
+    var string: String { return text ?? "" }
+}
+
+extension String {
+    private static var digitsPattern = UnicodeScalar("0")..."9"
+    var digits: String {
+        return unicodeScalars.filter { String.digitsPattern ~= $0 }.string
+    }
+    var integer: Int { return Int(self) ?? 0 }
+}
+
+extension Sequence where Iterator.Element == UnicodeScalar {
+    var string: String { return String(String.UnicodeScalarView(self)) }
+}

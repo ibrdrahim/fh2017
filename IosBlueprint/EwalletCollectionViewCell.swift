@@ -12,6 +12,7 @@ class EwalletCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var radioBtn: UIImageView!
     @IBOutlet var logo: UIImageView!
+    @IBOutlet var selectBtn: UIButton!
     
     var isActive = false
     

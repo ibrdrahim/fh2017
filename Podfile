@@ -20,6 +20,7 @@ target 'IosBlueprint' do
     pod 'KeychainAccess'
 
     pod "TextFieldEffects"
+    pod "SwiftyJSON"
 
 
   target 'IosBlueprintTests' do

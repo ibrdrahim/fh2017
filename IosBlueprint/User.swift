@@ -11,9 +11,13 @@ import Foundation
 class User {
     let userName:String
     let email:String
+    let phone:String
+    let balance:String
     
-    init(userName:String,email:String) {
+    init(userName:String,email:String,phone:String,balance:String) {
         self.userName = userName
         self.email = email
+        self.phone = phone
+        self.balance = balance
     }
 }

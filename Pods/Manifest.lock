@@ -28,6 +28,8 @@ PODS:
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
   - KeychainAccess (3.0.0)
+  - SwiftyJSON (3.1.4)
+  - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -36,6 +38,8 @@ DEPENDENCIES:
   - FBSDKShareKit
   - GoogleSignIn
   - KeychainAccess
+  - SwiftyJSON
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -50,7 +54,9 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: d09fe71c28c82ba4dd63ed454d1b58b254481d6b
+PODFILE CHECKSUM: f803859185f6382d625d918332417e1e6a773759
 
-COCOAPODS: 1.1.0.beta.1
+COCOAPODS: 1.2.1

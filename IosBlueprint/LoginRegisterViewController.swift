@@ -8,11 +8,16 @@
 
 import UIKit
 
-class LoginRegisterViewController: UIViewController {
+class LoginRegisterViewController: ScrollingFormViewController {
 
+    @IBOutlet var loginInput: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        self.hideKeyboardWhenTappedAround()
+        
+        loginInput.delegate = self
 
         // Do any additional setup after loading the view.
     }

@@ -31,17 +31,17 @@ class AuthService {
         APIHandler.request(url: "http://staging.api.workforce.id/api/v1/user/login", requestMethod: .post, requestParam: param){
             resp in
             
-            var messages = [String]()
-            
-            if let msg = resp["Message"] {
-                messages = parseJsonToString(object: msg)
-            }
-            
-            let response = apiResponse(status: resp["Status"] as! String, message: messages, data: resp["UserData"])
-            
-            callback(response)
+//            var messages = [String]()
+//            
+//            if let msg = resp["Message"] {
+//                messages = parseJsonToString(object: msg)
+//            }
+//            
+//            let response = apiResponse(status: resp["Status"] as! String, message: messages, data: resp["UserData"])
+//            
+//            callback()
         }
-
+        
     }
     // send social sign in request to api
     func socialSignIn(socialName:String,token:String,email:String,name:String?,callBack : (apiResponse) -> Void){
@@ -94,17 +94,17 @@ class AuthService {
         
         APIHandler.request(url: "http://staging.api.workforce.id/api/v1/user/forgotPassword", requestMethod: .post, requestParam: param){
             resp in
-            
-            
-            var messages = [String]()
-            
-            if let msg = resp["Message"] {
-                messages = parseJsonToString(object: msg)
-            }
-            
-            let response = apiResponse(status: resp["Status"] as! String, message: messages, data: resp["UserData"])
-            
-            callBack(response)
+//            
+//            
+//            var messages = [String]()
+//            
+//            if let msg = resp["Message"] {
+//                messages = parseJsonToString(object: msg)
+//            }
+//            
+//            let response = apiResponse(status: resp["Status"] as! String, message: messages, data: resp["UserData"])
+//            
+//            callBack(response)
         }
     }
     
@@ -117,7 +117,7 @@ class AuthService {
         callback(true)
     }
     
-    // submit new password 
+    // submit new password
     func submitNewPassword(recoveryCode:String,password : String , callback : (apiResponse) -> Void ){
         //
     }
